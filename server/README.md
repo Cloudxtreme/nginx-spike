@@ -9,8 +9,8 @@ Install vertx (2.0.2-final)
 `gvm install vertx`
 
 ## Running
-Run the server
-`vertx run vertx-server.groovy`
+Run the server (10 handlers)
+`vertx run vertx-server.groovy -instances 10`
 
 
 + http://localhost:8080/snail blocks for 5s

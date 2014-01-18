@@ -1,6 +1,7 @@
 # JMeter stress-test
 
-## Preparation
+## Editing the tests
+./gradlew jmeterEditor
 
-## Editing the test
-gradlew jmeterEditor
+## Running the tests
+./gradlew jmeterRun
