@@ -1,3 +1,5 @@
+// N.B. When used like this Vert.X is single threaded, so multiple instances are 
+// needed for any concurrency
 vertx.createHttpServer().requestHandler{req ->
 println(req.path)
 
@@ -6,7 +8,7 @@ println(req.path)
   if(req.path.startsWith('/hare')) Thread.sleep(100)  
 
   // This is for application level cache control
-//  req.response.putHeader('X-Accel-Expires', '15')
+  // req.response.putHeader('X-Accel-Expires', '15')
 
   req.response.end("Done")
 }.listen(8080, 'localhost')
